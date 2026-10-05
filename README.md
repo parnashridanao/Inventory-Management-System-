@@ -1,90 +1,61 @@
-# Inventory Management System
-
+📦 Inventory Management System
 A Flask-based Inventory Management System that allows users to manage products, track stock, search inventory, update product details, and identify low-stock products.
 
-## Features
+✨ Features
+• ➕ Add new products
+• 👁️ View all products
+• 🔍 Search products by name, product ID, or category
+• ✏️ Update product information
+• 🗑️ Delete products
+• 📈 Increase or decrease stock
+• ⚠️ Low-stock detection
+• 🔑 Product ID uniqueness validation
+• ✅ Quantity and price validation
+• 🗄️ SQLite database integration
+• 🌐 REST API endpoints
+• 🧪 Automated API testing
 
-* Add new products
-* View all products
-* Search products by name, product ID, or category
-* Update product information
-* Delete products
-* Increase or decrease stock
-* Low-stock detection
-* Product ID uniqueness validation
-* Quantity and price validation
-* SQLite database integration
-* REST API endpoints
-* Automated API testing
+🛠️ Tech Stack
+• 🐍 Python
+• 🧪 Flask
+• 🗄️ SQLite
+• 🌐 HTML/CSS/JavaScript
+• 🔗 REST API
 
-## Tech Stack
-
-* Python
-* Flask
-* SQLite
-* HTML/CSS/JavaScript
-* REST API
-
-## Project Structure
-
-```text
-inventory-management-system/
+📁 Project Structure
+Inventory Management System/
 │
-├── app.py
-├── test_app.py
-├── requirements.txt
-├── README.md
-├── .gitignore
-│
-├── templates/
-│   └── index.html
-│
-└── screenshots/
-```
+├── 🐍 app.py
+├── 📄 README.md
+├── 📋 requirements.txt
+└── 🧪 test_app.py
 
-## Database
-
+🗄️ Database
 The application uses SQLite to store product information.
-
 Each product contains:
 
-* Product ID
-* Name
-* Category
-* Quantity
-* Price
+• 🆔 Product ID
+• 🏷️ Name
+• 📂 Category
+• 🔢 Quantity
+• 💰 Price
 
 The application also identifies products as low-stock when their quantity reaches the configured low-stock limit.
 
-## API Endpoints
-
-### Display Application
-
-```text
+🔌 API Endpoints
+🖥️ Display Application
 GET /
-```
 
-### Get Products
-
-```text
+📦 Get Products
 GET /api/products
-```
 
 Search can be performed using:
-
-```text
 GET /api/products?q=product_name
-```
 
-### Add Product
-
-```text
+➕ Add Product
 POST /api/products
-```
-
 Example JSON:
 
-```json
 {
     "product_id": "P1",
     "name": "Pen",
@@ -92,123 +63,78 @@ Example JSON:
     "quantity": 50,
     "price": 10
 }
-```
 
-### Update Product
-
-```text
+✏️ Update Product
 PUT /api/products/<product_id>
-```
 
-### Adjust Stock
-
-```text
+🔄 Adjust Stock
 POST /api/products/<product_id>/stock
-```
-
 Example:
 
-```json
 {
     "delta": -5
 }
-```
 
-### Delete Product
-
-```text
+🗑️ Delete Product
 DELETE /api/products/<product_id>
-```
 
-## Installation
+🚀 Installation
+1. ⚙️ Clone the repository
+git clone https://github.com/parnashridanao/Inventory-Management-System-.git
 
-### 1. Clone the repository
+2. 📂 Open the project
+cd Inventory-Management-System-
 
-```bash
-git clone https://github.com/YOUR-USERNAME/inventory-management-system.git
-```
-
-### 2. Open the project
-
-```bash
-cd inventory-management-system
-```
-
-### 3. Create a virtual environment
-
+3. 🛠️ Create a virtual environment
 Windows:
-
-```bash
 python -m venv venv
-```
 
-### 4. Activate the virtual environment
-
+4. ⚡ Activate the virtual environment
 Windows:
-
-```bash
 venv\Scripts\activate
-```
 
-### 5. Install dependencies
-
-```bash
+5. 📦 Install dependencies
 pip install -r requirements.txt
-```
 
-### 6. Run the application
-
-```bash
+6. ▶️ Run the application
 python app.py
-```
-
 The application will start using Flask's development server.
-
 Open the local URL shown in the terminal in your browser.
 
-## Testing
-
-The project includes `test_app.py` for testing the API functionality.
-
+🧪 Testing
+The project includes test_app.py for testing the API functionality.
 Run:
 
-```bash
 python test_app.py
-```
 
 The test file checks:
+• 🌐 Application response
+• ➕ Product creation
+• 🚫 Duplicate product IDs
+• ❌ Invalid quantities
+• ❌ Invalid prices
+• ⚠️ Empty product IDs
+• ⚠️ Invalid quantity values
+• 🔍 Product search
+• ✏️ Product updates
+• 🔄 Stock adjustment
+• 🗑️ Product deletion
+• ❓ Product-not-found errors
 
-* Application response
-* Product creation
-* Duplicate product IDs
-* Invalid quantities
-* Invalid prices
-* Empty product IDs
-* Invalid quantity values
-* Product search
-* Product updates
-* Stock adjustment
-* Product deletion
-* Product-not-found errors
+🚀 Future Improvements
+• 👤 User authentication
+• 🔐 Role-based access control
+• 📊 Inventory dashboard
+• 📈 Sales and purchase tracking
+• 🖼️ Product image support
+• 📄 Export inventory reports
+• 📉 Advanced analytics
+• ☁️ Cloud database integration
+• 🌐 Deployment on a cloud platform
 
-## Future Improvements
+👤 Author
+Parnashri Danao
+🎓 BTech Electronics and Computer Science
 
-* User authentication
-* Role-based access control
-* Inventory dashboard
-* Sales and purchase tracking
-* Product image support
-* Export inventory reports
-* Advanced analytics
-* Cloud database integration
-* Deployment on a cloud platform
-
-## Author
-
-**Parnashri Danao**
-
-BTech Electronics and Computer Science
-
-## License
-
+📜 License
 This project is created for educational and portfolio purposes.
